@@ -1,0 +1,56 @@
+# Build & bin
+bin/
+obj/
+out/
+
+# Rider & VS Code
+.vscode/
+.idea/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# NuGet
+*.nupkg
+packages/
+# NuGet v3's project.json
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Logs
+*.log
+
+# Docker
+docker-compose.override.yml
+**/docker-compose.override.yml
+**/docker-compose.override.yaml
+**/docker-compose.override.*
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Test results
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+*.testlog
+
+# Entity Framework / migrations
+Migrations/
+*.db
+*.sqlite
+
+# ASP.NET temp files
+wwwroot/
+*.vsix

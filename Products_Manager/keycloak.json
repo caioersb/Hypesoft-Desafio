@@ -1,0 +1,24 @@
+{
+  "clientId": "frontend-client",
+  "name": "Frontend Client",
+  "enabled": true,
+  "protocol": "openid-connect",
+  "publicClient": true,
+  "bearerOnly": false,
+  "standardFlowEnabled": true,
+  "implicitFlowEnabled": false,
+  "directAccessGrantsEnabled": false,
+  "serviceAccountsEnabled": false,
+  "authorizationServicesEnabled": false,
+  "redirectUris": [
+    "http://localhost:5173/*"
+  ],
+  "webOrigins": [
+    "http://localhost:5173"
+  ],
+  "rootUrl": "http://localhost:5173",
+  "baseUrl": "/",
+  "attributes": {
+    "pkce.code.challenge.method": "S256"
+  }
+}

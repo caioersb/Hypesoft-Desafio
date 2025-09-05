@@ -1,0 +1,152 @@
+{
+  "info": {
+    "name": "Hypesoft API",
+    "_postman_id": "a4b0d580-1234-5678-90ab-cdef12345678",
+    "description": "Coleção para testar endpoints da Hypesoft API (Products e Categories)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Products",
+      "item": [
+        {
+          "name": "Get Product by Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/product/1234567890"
+          }
+        },
+        {
+          "name": "Search Products",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/product?name=Smartphone&categoryId=&page=1&pageSize=10"
+          }
+        },
+        {
+          "name": "Get All Products",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/product/all"
+          }
+        },
+        {
+          "name": "Create Product",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"dto\": {\n    \"name\": \"Smartphone XYZ\",\n    \"description\": \"Smartphone com 256GB de armazenamento\",\n    \"price\": 3500.00,\n    \"stockQuantity\": 20,\n    \"categoryId\": \"68b8d9a25b1e77589420d05b\"\n  }\n}"
+            },
+            "url": "{{baseUrl}}/api/product"
+          }
+        },
+        {
+          "name": "Update Product",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"dto\": {\n    \"name\": \"Smartphone XYZ Atualizado\",\n    \"description\": \"Versão 512GB\",\n    \"price\": 4200.00,\n    \"stockQuantity\": 15,\n    \"categoryId\": \"68b8d9a25b1e77589420d05b\"\n  }\n}"
+            },
+            "url": "{{baseUrl}}/api/product/1234567890"
+          }
+        },
+        {
+          "name": "Adjust Stock",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"delta\": -5\n}"
+            },
+            "url": "{{baseUrl}}/api/product/1234567890/adjust-stock"
+          }
+        },
+        {
+          "name": "Delete Product",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "{{baseUrl}}/api/product/1234567890"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Categories",
+      "item": [
+        {
+          "name": "Get Category by Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/category/68b8d9a25b1e77589420d05b"
+          }
+        },
+        {
+          "name": "Get All Categories",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/category"
+          }
+        },
+        {
+          "name": "Create category",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"dto\": {\n    \"name\": \"Categoria exemplo\",\n    \"description\": \"categoria\"\n  }\n}"
+            },
+            "url": "{{baseUrl}}/api/category"
+          }
+        },
+        {
+          "name": "Update Category",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"dto\": {\n    \"name\": \"Categoria Atualizada\",\n    \"description\": \"categoria editada\"\n  }\n}"
+            },
+            "url": "{{baseUrl}}/api/category/68b8d9a25b1e77589420d05b"
+          }
+        },
+        {
+          "name": "Delete Category",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "{{baseUrl}}/api/category/68b8d9a25b1e77589420d05b"
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:5198/api"
+    }
+  ]
+}
