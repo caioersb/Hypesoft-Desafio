@@ -68,4 +68,7 @@ Inclui **backend em .NET** com autenticação Keycloak e **frontend em React** c
 - Swagger documentado
 
 ---
+## Link para vídeo de apresentação
+https://www.loom.com/share/42b63aca2ebd400ca71970c4c65d3c93?sid=f0bb6604-d4f8-4b03-9c1a-c9bf05332f77
+---
 Para mais informações acessar README.md da API e Front-End
