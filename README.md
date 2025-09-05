@@ -7,14 +7,14 @@ Inclui **backend em .NET** com autenticação Keycloak e **frontend em React** c
 
 ## 🚀 Tecnologias
 
-### Backend
+### Backend (Pasta Products_Manager)
 - .NET 7 / ASP.NET Core
 - MongoDB (via Docker)
 - Keycloak (OAuth2/OpenID Connect)
 - CQRS + MediatR + Clean Architecture
 - Serilog, AutoMapper, FluentValidation
 
-### Frontend
+### Frontend (Pasta sgp_f)
 - React 18 + Vite + TypeScript
 - Tailwind CSS + Shadcn UI
 - React Query / TanStack Query
